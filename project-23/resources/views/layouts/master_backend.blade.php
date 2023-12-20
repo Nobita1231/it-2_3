@@ -109,25 +109,26 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="{{url('/dashboard')}}">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                            
                         </li>
                         <li>
+
+                        <li>
+                            <a href="{{route('u.index')}}">
+                                <i class="fas fa-copy"></i>User</a>
+                        </li>
                          
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                        <a href="{{route('p.index')}}">
+                                <i class="fas fa-copy"></i>Product</a>
                         </li>
                         <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
+                        <a href="{{route('c.index')}}">
+                                <i class="fas fa-copy"></i>Catagory</a>
                         </li>
                         
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-copy"></i>Pages</a>
@@ -165,7 +166,7 @@
                                     <div class="account-item clearfix js-item-menu">
                                         
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Logout</a>
+                                            <a class="js-acc-btn" href="#"> My Profile</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -176,15 +177,16 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        
+                                                        <a href="#">{{ Auth::user()->name }}</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">{{ Auth::user()->email }}</span>
                                                 </div>
                                             </div>
                                             <div>
                                             <a class="dropdown-item" href="{{ route('profile.edit') }}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                             My Profile
+                                            Profile
                                             </a>
                                             <form  class="login-form" method="POST" action= "{{ route('logout') }}">
                                                         @csrf

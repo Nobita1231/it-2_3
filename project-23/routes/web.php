@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\productController;
+use App\Http\Controllers\Admin\catagoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +31,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('admin/user/index',[UserController::class,'user']) ->name('u.index');
+Route::get('admin/product/index',[productController::class,'product']) ->name('p.index');
+Route::get('admin/catagory/index',[catagoryController::class,'catagory']) ->name('c.index');
