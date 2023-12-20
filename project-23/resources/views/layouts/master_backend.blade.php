@@ -182,6 +182,10 @@
                                                 </div>
                                             </div>
                                             <div>
+                                            <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                             My Profile
+                                            </a>
                                             <form  class="login-form" method="POST" action= "{{ route('logout') }}">
                                                         @csrf
                                                    
