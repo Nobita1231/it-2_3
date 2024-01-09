@@ -26,7 +26,6 @@
 		      	<div class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
-		      	<h3 class="text-center mb-4">Sign In</h3>
 				<form  class="login-form" method="POST" action= "{{ route('password.store') }}">
         @csrf
         <input type="hidden" name="token" value="{{ $request->route('token') }}">
