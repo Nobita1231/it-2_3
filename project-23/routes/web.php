@@ -35,5 +35,8 @@ require __DIR__.'/auth.php';
 Route::get('admin/user/index',[UserController::class,'user']) ->name('u.index');
 //เมนู Product
 Route::get('admin/product/index',[productController::class,'product']) ->name('p.index');
+Route::get('admin/product/create',[productController::class,'create']) ->name('p.create');
+
 //เมนู Catagory
 Route::get('admin/catagory/index',[catagoryController::class,'catagory']) ->name('c.index');
+Route::get('admin/catagory/create',[catagoryController::class,'create']) ->name('c.create');

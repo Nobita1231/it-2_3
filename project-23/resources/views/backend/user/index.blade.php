@@ -206,8 +206,7 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h1 class="title-1">User</h1>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>Add User</button>
+
                                 </div>
                             </div>
                         </div>

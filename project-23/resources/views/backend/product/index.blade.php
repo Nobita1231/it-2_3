@@ -206,8 +206,7 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h1 class="title-1">Product</h1>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>Add Product</button>
+                                       <a href="{{route('p.create')}}" class="btn btn-success mx-3"><i class='bx bxs-plus-circl'></i>Add Product</a>
                                 </div>
                             </div>
                         </div>

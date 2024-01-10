@@ -11,4 +11,8 @@ class catagoryController extends Controller
     return view('backend.catagory.index');
 }
 
+public function create(){
+    return view('backend.catagory.create');
+}
+
 }
