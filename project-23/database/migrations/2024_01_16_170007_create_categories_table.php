@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->after('name');
-            $table->string('phone',13)->after('username');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('category_id',10)->comment("รหัสประเภทสินค้า");
+            $table->string('name',255)->comment("ชื่อประเภทสินค้า");
+            $table->timestamps();
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('categories');
     }
 };

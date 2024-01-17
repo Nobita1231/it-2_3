@@ -1,7 +1,7 @@
 @extends('layouts.master_backend')
 @section('conten')
 <div class="main-content">
-          <form method="POST" action="{{ url('admin/catagory/insert') }}">
+          <form method="POST" action="{{ url('admin/catagory/update/'.$cat->category_id) }}">
                                     @csrf
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
@@ -15,8 +15,9 @@
                                   <div>
                                     <label for="defaultFormControlInput" class="form-label">Name</label>
                                     <input
-                                      type="text"
+                                      value="{{ $cat->name }}"
                                       name="name"
+                                      type="text"
                                       class="form-control"
                                       id="defaultFormControlInput"
                                       placeholder="กรุณากรอกชื่อ"
@@ -26,7 +27,7 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                     </div>
-                                      <input type="submit" value="บันทึก" class="btn btn-primary mt-3" บันทึก>
+                                      <input type="submit" value="อัพเดท" class="btn btn-primary mt-3" >
                                     <a href="{{ route ('c.index') }}" class="btn btn-danger mt-3 mx-2">ย้อนกลับ</a>
                                   </div>
                                 </div>

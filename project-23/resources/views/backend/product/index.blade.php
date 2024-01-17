@@ -206,7 +206,9 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h1 class="title-1">Product</h1>
-                                       <a href="{{route('p.create')}}" class="btn btn-success mx-3"><i class='bx bxs-plus-circl'></i>Add Product</a>
+                                    
+                                    <a href="{{route('p.create')}}" class="btn btn-success mx-3"><i class='bx bxs-plus-circl'></i>Add Product </a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -219,6 +221,7 @@
                                 <div class="table-responsive table--no-card m-b-30">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
+
                                             <tr>
                                                 <th>date</th>
                                                 <th>order ID</th>
