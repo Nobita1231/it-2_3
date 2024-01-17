@@ -38,7 +38,9 @@
 <body class="animsition">
 @include('sweetalert::alert')
 
+
     <div class="page-wrapper">
+    
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">

@@ -35,9 +35,8 @@ public function insert(Request $request){
        $cat = new Category();
        $cat->name = $request->name;
        $cat->save();
-       alert()->error('บันทึกช้อมูลสำเสร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกบันทึกลงในระบบฐานข้อมูลเรียบร้อยแล้ว');
-    
-     return redirect()->route('c.index');
+       alert()->success('SuccessAlert','Lorem ipsum dolor sit amet.');
+        return redirect()->route('c.index');
 
     }
         public function edit($category_id){
