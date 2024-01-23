@@ -114,23 +114,23 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="{{url('/dashboard')}}">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i></i>Dashboard</a>
                            
                         </li>
                         <li>
 
                         <li>
                             <a href="{{route('u.index')}}">
-                                <i class="fas fa-copy"></i>User</a>
+                                <i></i>User</a>
                         </li>
                          
                         <li>
                         <a href="{{route('p.index')}}">
-                                <i class="fas fa-copy"></i>Product</a>
+                                <i></i>Product</a>
                         </li>
                         <li>
                         <a href="{{route('c.index')}}">
-                                <i class="fas fa-copy"></i>Catagory</a>
+                                <i></i>Catagory</a>
                         </li>
                         
                        

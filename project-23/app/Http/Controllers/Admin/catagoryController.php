@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class catagoryController extends Controller
 {
     public function index(){
-        $category = Category::all();
+        $category = Category::orderBy('category_id','desc')->paginate(5);
         return view('backend.catagory.index',compact('category'));
     }
 
@@ -35,7 +35,7 @@ public function insert(Request $request){
        $cat = new Category();
        $cat->name = $request->name;
        $cat->save();
-       alert()->success('SuccessAlert','Lorem ipsum dolor sit amet.');
+       alert()->success('บันทึกช้อมูลสำเสร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกบันทึกลงในระบบฐานข้อมูลเรียบร้อยแล้ว');
         return redirect()->route('c.index');
 
     }
@@ -49,8 +49,13 @@ public function insert(Request $request){
             $category = Category::find($category_id);
             $category->name = $request->name;
             $category->update();
-            alert()->error('บันทึกช้อมูลสำเสร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกบันทึกลงในระบบฐานข้อมูลเรียบร้อยแล้ว');
+            alert()->success('อัพเดทสำเร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกอัพเดทในระบบฐานข้อมูลเรียบร้อยแล้ว');
             return redirect()->route('c.index');
         }
-
+        public function delete($category_id){
+            $category = Category::find($category_id);
+            $category->delete();
+            alert()->success('ลบข้อมูลสำเร็จ','ข้อมูลถูกลบเรียบร้อย');
+            return redirect()->route('c.index');
+        }
 }

@@ -35,14 +35,14 @@
                                     <tbody>
                                             @foreach($category as $cat)
                                             <tr>
-                                            <td>{{ $cat->category_id }}</td>
+                                            <td>{{ $category->firstItem()+$loop->index}}</td>
                                             <td>{{ $cat->name }}</td>
                                             <td>{{ $cat->created_at }}</td>
                                             <td>{{ $cat->updated_at }}</td>
                                             
                                             <td>
-                                            <a href="{{ url('admin/catagory/edit',$cat->category_id) }}"><i>แก้ไข</i></a>
-                                            <a href ="#"><i>ลบ</i></a>
+                                            <a href="{{ url('admin/catagory/edit'.$cat->category_id) }}"><i class="zmdi zmdi-edit"></i></a>
+                                            <a href ="{{url('admin/catagory/delete/'.$cat->category_id)}}"><i class="zmdi zmdi-delete"></i></a>
 
                                             
                                             
@@ -52,6 +52,9 @@
                                             @endforeach
                                         </tbody>
                                         </table>
+                                        <div class="mt-3 container">
+                                            {{$category->links('pagination::bootstrap-5')}}
+                                        </div>
                                 </div>
                             </div>
              </div>
