@@ -31,17 +31,31 @@
                                                 <th class="text-right">price</th>
                                                 <th class="text-right">quantity</th>
                                                 <th class="text-right">total</th>
+                                                <th class="text-right">Updated</th>
+                                                <th class="text-right">Actions</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-right">$999.00</td>
-                                                <td class="text-right">1</td>
-                                                <td class="text-right">$999.00</td>
-                                            </tr>
+                                          @foreach ( $product as $pro )
+                                          <tr>
+                                            <td>{{$product->firstItem()+$loop->index}}</td>
+                                            <td>{{$pro->name}}</td>
+                                            <td>
+                                                <img src="{{asset('backend/product/resize/'.$pro->image)}}"alt="">
+                                            </td>
+                                            <td class="text-right">{{$pro->price}}</td>
+                                            <td class="text-right">{{$pro->description}}</td>
+                                            <td class="text-right">{{$pro->created_at}}</td>
+                                            <td class="text-right">{{$pro->updated_at}}</td>
+
+
+                                    <td>
+                                        <a href="{{url('admin/product/edit/'.$pro->product_id)}}"><i class='zmdi zmdi-edit'></i></a>
+                                        <a href="{{url('admin/product/delete/'.$pro->product_id)}}"><i class='zmdi zmdi-delete'></i></a>
+                                    </td>
+                                </tr>
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>

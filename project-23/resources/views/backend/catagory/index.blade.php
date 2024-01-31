@@ -1,7 +1,7 @@
 @extends('layouts.master_backend')
 @section('conten')
-            
-      
+
+
             <div class="container">
              <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -14,11 +14,11 @@
                                 </div>
                             </div>
                         </div>
-                         </div> 
-                            </div> 
+                         </div>
+                            </div>
                             <div class="row justify-content-center">
 				                <div class="col-md-6 text-center mb-5">
-					
+
 				                </div>
                                 <div class="table-responsive table--no-card m-b-30">
                                     <table class="table table-borderless table-striped table-earning">
@@ -30,7 +30,7 @@
                                     <th>Created_at</th>
                                     <th>Created_at</th>
                                     <th>Actions</th>
-                                    
+
                                             </tr>
                                     <tbody>
                                             @foreach($category as $cat)
@@ -39,14 +39,14 @@
                                             <td>{{ $cat->name }}</td>
                                             <td>{{ $cat->created_at }}</td>
                                             <td>{{ $cat->updated_at }}</td>
-                                            
+
                                             <td>
-                                            <a href="{{ url('admin/catagory/edit'.$cat->category_id) }}"><i class="zmdi zmdi-edit"></i></a>
+                                            <a href="{{ url('admin/catagory/edit/'.$cat->category_id) }}"><i class="zmdi zmdi-edit"></i></a>
                                             <a href ="{{url('admin/catagory/delete/'.$cat->category_id)}}"><i class="zmdi zmdi-delete"></i></a>
 
-                                            
-                                            
-                                            
+
+
+
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -59,7 +59,7 @@
                             </div>
              </div>
             </div>
-                           
 
-                                      
+
+
 @endsection

@@ -24,7 +24,7 @@ public function insert(Request $request){
         //ทำการป้องกันการกรอกข้อมูลผ่านฟอร์ม
         $validated = $request->validate([
             'name' => 'required|unique:categories|max:255',
-            
+
         ],
         [
             'name.required' =>'กรุณากรอกชื่อประเภทสินค้า',
@@ -58,4 +58,5 @@ public function insert(Request $request){
             alert()->success('ลบข้อมูลสำเร็จ','ข้อมูลถูกลบเรียบร้อย');
             return redirect()->route('c.index');
         }
+        
 }

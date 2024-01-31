@@ -1,4 +1,4 @@
-เจมส์ เอี่ยมสำอางค์
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
