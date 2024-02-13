@@ -38,7 +38,7 @@ class productController extends Controller
             'price.required' => 'กรอกข้อมูลราคาสินค้า',
             'price.max' => 'กรอกข้อมูลได้ 255 ตัวอักษร',
             'description.required' => 'กรุณากรอกข้อมูลประเภทสินค้า',
-            'image.mimes' => 'อัพโหลดภาพที่มีนามสกุล .jpg . jpeg .png ได้เท่านั้น',
+            'image.mimes' => 'อัพโหลดภาพที่มีนามสกุล .jpg .jpeg .png ได้เท่านั้น',
         ]);
 
         $product = new Product();
@@ -47,7 +47,7 @@ class productController extends Controller
         $product->description = $request->description;
         $product->category_id = $request->category_id;
         if($request->hasFile('image')){
-            $filename = Str::random(10).'.' .$request->file('image')->getClientOriginalExtension();
+            $filename = Str::random(10).'.'.$request->file('image')->getClientOriginalExtension();
             $request->file('image')->move(public_path().'/backend/product/', $filename);
             Image::make(public_path().'/backend/product/'.$filename)->resize(200,200)->save(public_path().'/backend/product/resize/'.$filename);
             $product->image = $filename;

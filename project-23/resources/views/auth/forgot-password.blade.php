@@ -8,8 +8,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="{{asset('authen/css/style.css') }}">
+
+    <style>
+        body {
+          background-image: url('backend/images/icon/avatar-03.jpg');
+        }
+        </style>
 
 	</head>
 	<body>
@@ -17,8 +23,8 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Forgot your password?</h2>
-                       <h6>No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</h6>
+					<h2 style="color:rgb(255, 255, 255);">Forgot your password?</h2>
+                       <h6 style="color:rgb(255, 255, 255);">No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one</h6>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -43,12 +49,12 @@
 	            <div class="form-group d-md-flex">
 
                 <div class="w-30 text-md-right">
-                    
-								
+
+
 								</div>
 
-	            	
-								
+
+
 	            </div>
 	          </form>
 	        </div>

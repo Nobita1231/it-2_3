@@ -25,12 +25,12 @@
                                         <thead>
 
                                             <tr>
-                                                <th>date</th>
-                                                <th>order ID</th>
-                                                <th>name</th>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th class="text-right">Picture</th>
                                                 <th class="text-right">price</th>
-                                                <th class="text-right">quantity</th>
-                                                <th class="text-right">total</th>
+                                                <th class="text-right">Description</th>
+                                                <th class="text-right">create</th>
                                                 <th class="text-right">Updated</th>
                                                 <th class="text-right">Actions</th>
 

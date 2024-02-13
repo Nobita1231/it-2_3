@@ -35,7 +35,7 @@ public function insert(Request $request){
        $cat = new Category();
        $cat->name = $request->name;
        $cat->save();
-       alert()->success('บันทึกช้อมูลสำเสร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกบันทึกลงในระบบฐานข้อมูลเรียบร้อยแล้ว');
+       alert()->success('บันทึกข้อมูลสำเร็จ','ชื่อประเภทสินค้าชื่อนี้ถูกบันทึกลงในระบบฐานข้อมูลเรียบร้อยแล้ว');
         return redirect()->route('c.index');
 
     }
@@ -58,5 +58,5 @@ public function insert(Request $request){
             alert()->success('ลบข้อมูลสำเร็จ','ข้อมูลถูกลบเรียบร้อย');
             return redirect()->route('c.index');
         }
-        
+
 }

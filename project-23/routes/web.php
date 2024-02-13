@@ -3,6 +3,9 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\productController;
 use App\Http\Controllers\Admin\catagoryController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +24,10 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+$u = User::all();
+$p = Product::all();
+$c = Category::all();
+    return view('dashboard' ,compact('u','p','c'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
