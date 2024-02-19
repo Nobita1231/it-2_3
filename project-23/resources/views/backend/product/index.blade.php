@@ -7,9 +7,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h1 class="title-1">Product</h1>
+                                    <h1 class="title-1">Vegetable</h1>
 
-                                    <a href="{{route('p.create')}}" class="btn btn-success mx-3"><i class='bx bxs-plus-circl'></i>Add Product </a>
+                                    <a href="{{route('p.create')}}" class="btn btn-success mx-3"><i class='bx bxs-plus-circl'></i>Add Vegetable </a>
 
                                 </div>
                             </div>
@@ -18,6 +18,7 @@
                             </div>
                             <div class="row justify-content-center">
 				                <div class="col-md-6 text-center mb-5">
+
 
 				                </div>
                                 <div class="table-responsive table--no-card m-b-30">
@@ -30,6 +31,7 @@
                                                 <th class="text-right">Picture</th>
                                                 <th class="text-right">price</th>
                                                 <th class="text-right">Description</th>
+                                                <th class="text-right">Quantity</th>
                                                 <th class="text-right">create</th>
                                                 <th class="text-right">Updated</th>
                                                 <th class="text-right">Actions</th>
@@ -46,8 +48,11 @@
                                             </td>
                                             <td class="text-right">{{$pro->price}}</td>
                                             <td class="text-right">{{$pro->description}}</td>
+                                            <td class="text-right">{{$pro->qty}}</td>
                                             <td class="text-right">{{$pro->created_at}}</td>
                                             <td class="text-right">{{$pro->updated_at}}</td>
+
+
 
 
                                     <td>
@@ -55,9 +60,16 @@
                                         <a href="{{url('admin/product/delete/'.$pro->product_id)}}"><i class='zmdi zmdi-delete'></i></a>
                                     </td>
                                 </tr>
+
+
+
                                           @endforeach
+
                                         </tbody>
                                     </table>
+                                    <div class="mt-3 container">
+                                        {{$product->links('pagination::bootstrap-5')}}
+                                    </div>
                                 </div>
                             </div>
              </div>

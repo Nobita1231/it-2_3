@@ -27,8 +27,8 @@
                                     <tr>
                                     <th>No</th>
                                     <th>Name</th>
-                                    <th>Created_at</th>
-                                    <th>Created_at</th>
+                                    <th>Created</th>
+                                    <th>Updated</th>
                                     <th>Actions</th>
 
                                             </tr>

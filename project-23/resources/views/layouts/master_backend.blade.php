@@ -106,8 +106,8 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                     <a href="{{ route('dashboard') }}">
-                    <h3> บ้านผักปลายสวน </h3>
-                  
+                    <h4> Ban Phak Plai Suan </h4>
+
 
                 </a>
             </div>
@@ -128,7 +128,7 @@
 
                         <li>
                         <a href="{{route('p.index')}}">
-                                <i></i>Product</a>
+                                <i></i>Vegetable</a>
                         </li>
                         <li>
                         <a href="{{route('c.index')}}">

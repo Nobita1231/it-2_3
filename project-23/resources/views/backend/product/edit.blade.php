@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card mb-9">
-                                <h5 class="card-header">Product</h5>
+                                <h5 class="card-header">Vegetable</h5>
                                 <div class="card-body">
                                     <form action="{{ url('admin/product/update/' . $pro->product_id) }}" method="post"
                                         enctype="multipart/form-data">
@@ -46,6 +46,20 @@
                                                 @enderror
                                             </div>
 
+                                            <label for="defaultFormControlInput" class="form-label">Quantity</label>
+                                            <input
+                                              type="number"
+                                              name="qty"
+                                              class="form-control"
+                                              id="defaultFormControlInput"
+                                              placeholder="จำนวนสินค้า"
+                                              value="{{ $pro->qty }}"
+                                              />
+                                              <div class="mt-3">
+                                              @error('qty')
+                                              <div class ="alert alert-danger">{{$message}}</div>
+                                              @enderror
+                                              </div>
 
                                             <div class="form-group">
                                                 <label for="exampleFormControlSelect1">Category</label>
