@@ -54,6 +54,10 @@ public function insert(Request $request){
         }
         public function delete($category_id){
             $category = Category::find($category_id);
+            if($category->product->count()>0){
+                alert()->success('ไม่สามารถลบประเภทสินค้าได้','เนื่องจากมีสินค้าอยู่ในประเภทนี้');
+                return redirect()->back();
+            }
             $category->delete();
             alert()->success('ลบข้อมูลสำเร็จ','ข้อมูลถูกลบเรียบร้อย');
             return redirect()->route('c.index');

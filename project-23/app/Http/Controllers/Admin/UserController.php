@@ -11,6 +11,7 @@ class UserController extends Controller
     public function user(){
     $user = User::all();
     return view('backend.user.index',compact('user'));
+
 }
 
 }

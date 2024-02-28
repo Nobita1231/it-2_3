@@ -27,6 +27,7 @@
                                     <tr>
                                     <th>No</th>
                                     <th>Name</th>
+                                    <th>Number Product<th>
                                     <th>Created</th>
                                     <th>Updated</th>
                                     <th>Actions</th>
@@ -37,17 +38,11 @@
                                             <tr>
                                             <td>{{ $category->firstItem()+$loop->index}}</td>
                                             <td>{{ $cat->name }}</td>
+                                            <td>{{ $cat->product->count()}}</td>
                                             <td>{{ $cat->created_at }}</td>
                                             <td>{{ $cat->updated_at }}</td>
-
-                                            <td>
-                                            <a href="{{ url('admin/catagory/edit/'.$cat->category_id) }}"><i class="zmdi zmdi-edit"></i></a>
-                                            <a href ="{{url('admin/catagory/delete/'.$cat->category_id)}}"><i class="zmdi zmdi-delete"></i></a>
-
-
-
-
-                                                </td>
+                                            <td> <a href="{{ url('admin/catagory/edit/'.$cat->category_id) }}"><i class="zmdi zmdi-edit"></i></a></td>
+                                            <td> <a href ="{{url('admin/catagory/delete/'.$cat->category_id)}}"><i class="zmdi zmdi-delete"></i></a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>
